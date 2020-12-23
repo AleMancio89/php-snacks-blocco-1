@@ -37,13 +37,13 @@ $matches = [
 for ($i = 0; $i < count($matches); $i++) {
     $keys = array_keys($matches);
     $match = $keys[$i];
-    echo $matches[$match]['Home'] . ' - ' . $matches[$match]['Away'] . ' | ' . $matches[$match]['Score Home'] . '-' . $matches[$match]['Score Away'] . '<br>' ;
+    echo '<p>' . $matches[$match]['Home'] . ' - ' . $matches[$match]['Away'] . ' | ' . $matches[$match]['Score Home'] . '-' . $matches[$match]['Score Away'] . '</p>' ;
 }
 
 
 ?>
 
-<?php echo "<br> <br> <br>";?>
+<?php echo "<br> <br> <br>"?>
 
 <?php 
 /* 
@@ -61,9 +61,9 @@ $mail = $_GET['mail'];
 $age = $_GET['age'];
 
 if((strlen($name) > 3) && (strpos($mail, '@') !== false) && (strpos($mail, '.') !== false) && (is_numeric($age))) {
-    echo 'Accesso consentito';
+    echo '<p> Accesso riuscito </p>';
 } else {
-    echo 'Accesso NON consentito';
+    echo '<p> Accesso negato </p>';
 }
 
 ?>
